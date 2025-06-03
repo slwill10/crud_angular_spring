@@ -1,0 +1,12 @@
+front-end/node_modules/
+front-end/dist/
+
+back-end/target/
+back-end/.classpath
+back-end/.project
+back-end/.settings/
+back-end/build/
+
+*.log
+*.class
+.DS_Store
