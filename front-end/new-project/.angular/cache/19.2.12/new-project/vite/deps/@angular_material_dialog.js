@@ -5,11 +5,11 @@ import {
   ViewportRuler
 } from "./chunk-SHAVXDC4.js";
 import {
-  _isTestEnvironment
-} from "./chunk-42FJBLFI.js";
-import {
   coerceCssPixelValue
 } from "./chunk-A5LZPU3I.js";
+import {
+  _isTestEnvironment
+} from "./chunk-42FJBLFI.js";
 import {
   supportsScrollBehavior
 } from "./chunk-2O4WY5GE.js";

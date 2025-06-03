@@ -12,7 +12,7 @@ export class CoursesService {
     throw new Error('Method not implemented.');
   }
 
-  private readonly API = 'assets/courses.json';
+  private readonly API = 'api/courses';
 
   constructor(private httpClient: HttpClient) {  }
 
