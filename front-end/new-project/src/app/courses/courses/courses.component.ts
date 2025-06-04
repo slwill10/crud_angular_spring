@@ -11,6 +11,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { ActivatedRoute, Router } from '@angular/router';
+import { relative } from 'path';
 
 @Component({
   selector: 'app-courses',
@@ -22,18 +25,21 @@ import { MatIconModule } from '@angular/material/icon';
     MatTableModule,
     MatProgressSpinnerModule,
     MatIconModule,
-    CategoryPipe
+    CategoryPipe,
+    MatButtonModule
   ],
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.css'],
 })
 export class CoursesComponent implements OnInit {
   courses$: Observable<Course[]>;
-  displayedColumns = ['name', 'categoria'];
+  displayedColumns = ['name', 'categoria', 'actions'];
 
 
   constructor(private coursesService: CoursesService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.courses$ = this.coursesService.find_all().pipe(
       catchError((error) => {
@@ -50,4 +56,7 @@ export class CoursesComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+  onAdd(){
+    this.router.navigate(['new'], {relativeTo: this.route});
+  }
 }
