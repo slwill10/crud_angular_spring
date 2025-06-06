@@ -3,19 +3,19 @@ import {
   ScrollDispatcher,
   ScrollingModule,
   ViewportRuler
-} from "./chunk-JJ43FR4D.js";
+} from "./chunk-YRRN6QJY.js";
 import {
-  coerceCssPixelValue
-} from "./chunk-ZTGWVF2L.js";
+  _animationsDisabled
+} from "./chunk-LHG4TJ5Z.js";
 import {
   _isTestEnvironment
 } from "./chunk-QCETVJKM.js";
 import {
+  coerceCssPixelValue
+} from "./chunk-KAPXTIMC.js";
+import {
   supportsScrollBehavior
 } from "./chunk-EOFW2REK.js";
-import {
-  _animationsDisabled
-} from "./chunk-ASHSL2C7.js";
 import {
   A11yModule,
   ESCAPE,
@@ -23,19 +23,21 @@ import {
   FocusTrapFactory,
   InteractivityChecker,
   MatCommonModule,
-  Platform,
-  _CdkPrivateStyleLoader,
   _IdGenerator,
   _getEventTarget,
   _getFocusedElementPierceShadowDom,
   coerceArray,
-  coerceNumberProperty,
   hasModifierKey
-} from "./chunk-AVELBD3T.js";
+} from "./chunk-WYCBEQSP.js";
 import {
   BidiModule,
   Directionality
 } from "./chunk-4SNOHQMC.js";
+import {
+  Platform,
+  _CdkPrivateStyleLoader,
+  coerceNumberProperty
+} from "./chunk-LKZZARCA.js";
 import {
   Location
 } from "./chunk-77HBILMF.js";

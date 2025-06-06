@@ -1,5 +1,8 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
+  _DisposeViewRepeaterStrategy
+} from "./chunk-QL2YZFMU.js";
+import {
   DataSource,
   ScrollingModule,
   ViewportRuler,
@@ -7,19 +10,22 @@ import {
   _VIEW_REPEATER_STRATEGY,
   _ViewRepeaterOperation,
   isDataSource
-} from "./chunk-XVNFKNEJ.js";
-import "./chunk-VZTOH5DE.js";
+} from "./chunk-KVM5ZTPD.js";
+import "./chunk-KXD77YIU.js";
 import "./chunk-YZRXDCC3.js";
 import {
-  MatCommonModule,
+  MatCommonModule
+} from "./chunk-DPJGN6T2.js";
+import "./chunk-SFO7F4SV.js";
+import {
   Platform,
   _isNumberValue
-} from "./chunk-DQLPB3J7.js";
-import "./chunk-6UVHO2QN.js";
-import "./chunk-BEDWDDID.js";
+} from "./chunk-Q2NRJPTM.js";
 import {
   Directionality
 } from "./chunk-DZKPITCJ.js";
+import "./chunk-6UVHO2QN.js";
+import "./chunk-BEDWDDID.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -31,7 +37,6 @@ import {
   ElementRef,
   EventEmitter,
   HostAttributeToken,
-  Injectable,
   InjectionToken,
   Injector,
   Input,
@@ -57,7 +62,6 @@ import {
   ɵɵcontentQuery,
   ɵɵdefineComponent,
   ɵɵdefineDirective,
-  ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵelementContainer,
@@ -87,39 +91,6 @@ import {
 // node_modules/@angular/cdk/fesm2022/table.mjs
 var import_rxjs = __toESM(require_cjs(), 1);
 var import_operators = __toESM(require_operators(), 1);
-
-// node_modules/@angular/cdk/fesm2022/dispose-view-repeater-strategy-D_JReLI1.mjs
-var _DisposeViewRepeaterStrategy = class {
-  applyChanges(changes, viewContainerRef, itemContextFactory, itemValueResolver, itemViewChanged) {
-    changes.forEachOperation((record, adjustedPreviousIndex, currentIndex) => {
-      let view;
-      let operation;
-      if (record.previousIndex == null) {
-        const insertContext = itemContextFactory(record, adjustedPreviousIndex, currentIndex);
-        view = viewContainerRef.createEmbeddedView(insertContext.templateRef, insertContext.context, insertContext.index);
-        operation = _ViewRepeaterOperation.INSERTED;
-      } else if (currentIndex == null) {
-        viewContainerRef.remove(adjustedPreviousIndex);
-        operation = _ViewRepeaterOperation.REMOVED;
-      } else {
-        view = viewContainerRef.get(adjustedPreviousIndex);
-        viewContainerRef.move(view, currentIndex);
-        operation = _ViewRepeaterOperation.MOVED;
-      }
-      if (itemViewChanged) {
-        itemViewChanged({
-          context: view?.context,
-          operation,
-          record
-        });
-      }
-    });
-  }
-  detach() {
-  }
-};
-
-// node_modules/@angular/cdk/fesm2022/table.mjs
 var _c0 = [[["caption"]], [["colgroup"], ["col"]], "*"];
 var _c1 = ["caption", "colgroup, col", "*"];
 function CdkTable_Conditional_2_Template(rf, ctx) {
@@ -2715,60 +2686,8 @@ var CdkTableModule = class _CdkTableModule {
   }], null, null);
 })();
 
-// node_modules/@angular/cdk/fesm2022/unique-selection-dispatcher-Cewa_Eg3.mjs
-var UniqueSelectionDispatcher = class _UniqueSelectionDispatcher {
-  _listeners = [];
-  /**
-   * Notify other items that selection for the given name has been set.
-   * @param id ID of the item.
-   * @param name Name of the item.
-   */
-  notify(id, name) {
-    for (let listener of this._listeners) {
-      listener(id, name);
-    }
-  }
-  /**
-   * Listen for future changes to item selection.
-   * @return Function used to deregister listener
-   */
-  listen(listener) {
-    this._listeners.push(listener);
-    return () => {
-      this._listeners = this._listeners.filter((registered) => {
-        return listener !== registered;
-      });
-    };
-  }
-  ngOnDestroy() {
-    this._listeners = [];
-  }
-  static ɵfac = function UniqueSelectionDispatcher_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _UniqueSelectionDispatcher)();
-  };
-  static ɵprov = ɵɵdefineInjectable({
-    token: _UniqueSelectionDispatcher,
-    factory: _UniqueSelectionDispatcher.ɵfac,
-    providedIn: "root"
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(UniqueSelectionDispatcher, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], null, null);
-})();
-
-// node_modules/@angular/cdk/fesm2022/selection-model-BCgC8uEN.mjs
-var import_rxjs2 = __toESM(require_cjs(), 1);
-
-// node_modules/@angular/cdk/fesm2022/collections.mjs
-var import_rxjs3 = __toESM(require_cjs(), 1);
-
 // node_modules/@angular/material/fesm2022/table.mjs
-var import_rxjs4 = __toESM(require_cjs(), 1);
+var import_rxjs2 = __toESM(require_cjs(), 1);
 var import_operators2 = __toESM(require_operators(), 1);
 var _c02 = [[["caption"]], [["colgroup"], ["col"]], "*"];
 var _c12 = ["caption", "colgroup, col", "*"];
@@ -3652,11 +3571,11 @@ var MatTableDataSource = class extends DataSource {
   /** Stream that emits when a new data array is set on the data source. */
   _data;
   /** Stream emitting render data to the table (depends on ordered data changes). */
-  _renderData = new import_rxjs4.BehaviorSubject([]);
+  _renderData = new import_rxjs2.BehaviorSubject([]);
   /** Stream that emits when a new filter string is set on the data source. */
-  _filter = new import_rxjs4.BehaviorSubject("");
+  _filter = new import_rxjs2.BehaviorSubject("");
   /** Used to react to internal changes of the paginator that are made by the data source itself. */
-  _internalPageChanges = new import_rxjs4.Subject();
+  _internalPageChanges = new import_rxjs2.Subject();
   /**
    * Subscription to the changes that should trigger an update to the table's rendered rows, such
    * as filtering, sorting, pagination, or base data changes.
@@ -3799,7 +3718,7 @@ var MatTableDataSource = class extends DataSource {
   };
   constructor(initialData = []) {
     super();
-    this._data = new import_rxjs4.BehaviorSubject(initialData);
+    this._data = new import_rxjs2.BehaviorSubject(initialData);
     this._updateChangeSubscription();
   }
   /**
@@ -3808,12 +3727,12 @@ var MatTableDataSource = class extends DataSource {
    * the provided base data and send it to the table for rendering.
    */
   _updateChangeSubscription() {
-    const sortChange = this._sort ? (0, import_rxjs4.merge)(this._sort.sortChange, this._sort.initialized) : (0, import_rxjs4.of)(null);
-    const pageChange = this._paginator ? (0, import_rxjs4.merge)(this._paginator.page, this._internalPageChanges, this._paginator.initialized) : (0, import_rxjs4.of)(null);
+    const sortChange = this._sort ? (0, import_rxjs2.merge)(this._sort.sortChange, this._sort.initialized) : (0, import_rxjs2.of)(null);
+    const pageChange = this._paginator ? (0, import_rxjs2.merge)(this._paginator.page, this._internalPageChanges, this._paginator.initialized) : (0, import_rxjs2.of)(null);
     const dataStream = this._data;
-    const filteredData = (0, import_rxjs4.combineLatest)([dataStream, this._filter]).pipe((0, import_operators2.map)(([data]) => this._filterData(data)));
-    const orderedData = (0, import_rxjs4.combineLatest)([filteredData, sortChange]).pipe((0, import_operators2.map)(([data]) => this._orderData(data)));
-    const paginatedData = (0, import_rxjs4.combineLatest)([orderedData, pageChange]).pipe((0, import_operators2.map)(([data]) => this._pageData(data)));
+    const filteredData = (0, import_rxjs2.combineLatest)([dataStream, this._filter]).pipe((0, import_operators2.map)(([data]) => this._filterData(data)));
+    const orderedData = (0, import_rxjs2.combineLatest)([filteredData, sortChange]).pipe((0, import_operators2.map)(([data]) => this._orderData(data)));
+    const paginatedData = (0, import_rxjs2.combineLatest)([orderedData, pageChange]).pipe((0, import_operators2.map)(([data]) => this._pageData(data)));
     this._renderChangesSubscription?.unsubscribe();
     this._renderChangesSubscription = paginatedData.subscribe((data) => this._renderData.next(data));
   }

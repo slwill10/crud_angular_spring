@@ -8,9 +8,6 @@ import { delay, first, tap } from 'rxjs';
   providedIn: 'root',
 })
 export class CoursesService {
-  // list(): import("rxjs").Observable<Course[]> {
-  //   throw new Error('Method not implemented.');
-  // }
 
   private readonly API = 'api/courses';
 
